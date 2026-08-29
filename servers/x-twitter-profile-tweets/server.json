@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mrocker/x-twitter-profile-tweets",
+  "description": "X (Twitter) profiles, tweets and single-tweet lookup by handle or URL. No login. Pay per result.",
+  "repository": {
+    "url": "https://github.com/mrocker/social-data-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/nick.cheng/x-twitter-profile-tweets-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=nick.cheng/x-twitter-profile-tweets-scraper"
+    }
+  ]
+}

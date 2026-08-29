@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mrocker/tiktok-profile-stats",
+  "description": "TikTok profiles (followers, bio) and per-video stats by handle or URL. No login. Pay per result.",
+  "repository": {
+    "url": "https://github.com/mrocker/social-data-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/nick.cheng/tiktok-profile-stats-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=nick.cheng/tiktok-profile-stats-scraper"
+    }
+  ]
+}

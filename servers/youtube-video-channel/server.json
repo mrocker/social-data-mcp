@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mrocker/youtube-video-channel",
+  "description": "YouTube video metadata and channel data by URL or @handle. No API key or quota. Pay per result.",
+  "repository": {
+    "url": "https://github.com/mrocker/social-data-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/nick.cheng/youtube-video-channel-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=nick.cheng/youtube-video-channel-scraper"
+    }
+  ]
+}
