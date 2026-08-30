@@ -40,12 +40,15 @@ The three servers are also listed in the official MCP Registry as
 
 ## Use as a local stdio server
 
+Published on npm as [`social-data-mcp`](https://www.npmjs.com/package/social-data-mcp) and in the
+MCP Registry as `io.github.mrocker/social-data-mcp`:
+
 ```json
 {
   "mcpServers": {
     "social-data": {
       "command": "npx",
-      "args": ["-y", "github:mrocker/social-data-mcp"],
+      "args": ["-y", "social-data-mcp"],
       "env": { "APIFY_TOKEN": "<your token>" }
     }
   }
