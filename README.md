@@ -32,7 +32,11 @@ Or pick one: `https://mcp.apify.com/?tools=nick.cheng/tiktok-profile-stats-scrap
 
 The three servers are also listed in the official MCP Registry as
 `io.github.mrocker/x-twitter-profile-tweets`, `io.github.mrocker/youtube-video-channel`,
-`io.github.mrocker/tiktok-profile-stats` (see `servers/`).
+`io.github.mrocker/tiktok-profile-stats` (see `servers/`), and on Smithery:
+[nick-cheng/x-twitter-profile-tweets](https://smithery.ai/servers/nick-cheng/x-twitter-profile-tweets) ·
+[nick-cheng/youtube-video-channel](https://smithery.ai/servers/nick-cheng/youtube-video-channel) ·
+[nick-cheng/tiktok-profile-stats](https://smithery.ai/servers/nick-cheng/tiktok-profile-stats)
+(the Smithery gateway forwards your Apify token as a `token` query parameter).
 
 ## Use as a local stdio server
 
