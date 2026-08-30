@@ -3,10 +3,27 @@
   "version": "1.0.0",
   "description": "MCP server exposing three pay-per-result social data tools (X/Twitter profiles & tweets, YouTube videos & channels, TikTok profiles & videos) hosted on Apify. Thin stdio wrapper around @apify/actors-mcp-server.",
   "mcpName": "io.github.mrocker/social-data-mcp",
-  "bin": { "social-data-mcp": "bin/social-data-mcp.js" },
+  "bin": {
+    "social-data-mcp": "bin/social-data-mcp.js"
+  },
   "type": "module",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/mrocker/social-data-mcp" },
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "twitter", "x", "youtube", "tiktok", "scraper", "apify"],
-  "engines": { "node": ">=18" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrocker/social-data-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "twitter",
+    "x",
+    "youtube",
+    "tiktok",
+    "scraper",
+    "apify"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
 }
