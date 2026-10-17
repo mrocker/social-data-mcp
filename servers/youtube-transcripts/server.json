@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mrocker/youtube-transcripts",
+  "description": "YouTube transcripts with timestamps from video links or channels. Charged only per transcript.",
+  "repository": {
+    "url": "https://github.com/mrocker/social-data-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/nick.cheng/youtube-transcript-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=nick.cheng/youtube-transcript-scraper"
+    }
+  ]
+}

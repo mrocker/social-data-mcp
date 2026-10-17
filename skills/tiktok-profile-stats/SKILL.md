@@ -1,6 +1,6 @@
 ---
 name: tiktok-profile-stats
-description: Fetch TikTok account profiles (follower count, likes, video count, bio, verification, account age, business flags) by handle or URL, and per-video stats (plays, likes, comments, shares, saves) by video URL or ID — without login, cookies or signature hacks. Use when a task needs real TikTok numbers.
+description: Fetch TikTok account profiles (follower count, likes, video count, bio, verification, account age, business flags) by handle or URL, and per-video stats (plays, likes, comments, shares, saves) and optional transcripts by video URL or ID — without login, cookies or signature hacks. Use when a task needs real TikTok numbers or what a video says.
 ---
 
 # TikTok profiles & video stats
@@ -14,6 +14,8 @@ same on every plan). Needs `APIFY_TOKEN` (free account: https://console.apify.co
 - "How many followers does @handle have / is it verified / how old is the account" → `handles`
 - "Stats for these video links" → `videoUrls` (full links, `vm.tiktok.com` share links, or bare IDs)
 - Creator vetting: `isBusinessAccount`, `businessCategory`, `duetSetting`, `stitchSetting`, `createdAt`
+- "Stats and what is said in these videos" → add `includeSubtitles: true` (no extra charge). Transcripts only:
+  `nick.cheng/tiktok-transcript-scraper` ($0.003 per transcript; see the `tiktok-transcripts` skill)
 
 ## Call it
 
@@ -32,7 +34,8 @@ Or as an MCP tool: `https://mcp.apify.com/?tools=nick.cheng/tiktok-profile-stats
   `isBusinessAccount`, `businessCategory`, `commentSetting`, `duetSetting`, `stitchSetting`
 - `itemType: "video"` — `videoId`, `url`, `description`, `createdAt`, `durationSeconds`, `playCount`,
   `likeCount`, `commentCount`, `shareCount`, `collectCount`, `repostCount`, `hashtags`, `music`,
-  `author` (creator's headline counts), `isAd`, `isPhotoPost`
+  `author` (creator's headline counts), `isAd`, `isPhotoPost`; with `includeSubtitles` also `transcript`,
+  `transcriptLanguage`, `transcriptType`, `subtitles[].segments` (`{start, end, text}`), `subtitlesNote`
 - `error: true, chargedForThis: false` — account/video not found, reason given
 
 ## Limits

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mrocker/tiktok-transcripts",
+  "description": "TikTok video transcripts with timestamps by URL or ID. No login. Charged only per transcript.",
+  "repository": {
+    "url": "https://github.com/mrocker/social-data-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/nick.cheng/tiktok-transcript-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=nick.cheng/tiktok-transcript-scraper"
+    }
+  ]
+}

@@ -1,14 +1,16 @@
 #!/usr/bin/env node
-// Thin stdio MCP server: runs Apify's actors-mcp-server pre-scoped to the three social data Actors.
+// Thin stdio MCP server: runs Apify's actors-mcp-server pre-scoped to the social data Actors.
 // Needs APIFY_TOKEN in the environment (https://console.apify.com/account/integrations).
 // Prefer the hosted endpoint when your client supports remote MCP servers:
-//   https://mcp.apify.com/?tools=nick.cheng/x-twitter-profile-tweets-scraper,nick.cheng/youtube-video-channel-scraper,nick.cheng/tiktok-profile-stats-scraper
+//   https://mcp.apify.com/?tools=nick.cheng/x-twitter-profile-tweets-scraper,nick.cheng/youtube-video-channel-scraper,nick.cheng/tiktok-profile-stats-scraper,nick.cheng/youtube-transcript-scraper,nick.cheng/tiktok-transcript-scraper
 import { spawn } from 'node:child_process';
 
 const ACTORS = [
   'nick.cheng/x-twitter-profile-tweets-scraper',
   'nick.cheng/youtube-video-channel-scraper',
   'nick.cheng/tiktok-profile-stats-scraper',
+  'nick.cheng/youtube-transcript-scraper',
+  'nick.cheng/tiktok-transcript-scraper',
 ];
 if (!process.env.APIFY_TOKEN) {
   process.stderr.write('social-data-mcp: set APIFY_TOKEN (free Apify account works; you pay per result, same price on every plan)\n');
