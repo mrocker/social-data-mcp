@@ -11,7 +11,7 @@ only for results that actually came back, at the same price on every Apify plan 
 |---|---|---|
 | X (Twitter) profiles, tweets, single-tweet lookup, engagement filters, incremental runs (full timelines with your own `cookies`) | [`nick.cheng/x-twitter-profile-tweets-scraper`](https://apify.com/nick.cheng/x-twitter-profile-tweets-scraper) | $0.005/account · $0.0003/tweet · $0.005/tweet lookup |
 | YouTube video metadata & channel data, filters by views/duration/date | [`nick.cheng/youtube-video-channel-scraper`](https://apify.com/nick.cheng/youtube-video-channel-scraper) | $0.015/video · $0.005/channel |
-| TikTok profiles & per-video stats | [`nick.cheng/tiktok-profile-stats-scraper`](https://apify.com/nick.cheng/tiktok-profile-stats-scraper) | $0.02/profile · $0.01/video |
+| TikTok profiles & per-video stats | [`nick.cheng/tiktok-profile-stats-scraper`](https://apify.com/nick.cheng/tiktok-profile-stats-scraper) | $0.02/profile · $0.003/video |
 | YouTube transcripts — spoken-language captions as text + timed segments, from links or channels | [`nick.cheng/youtube-transcript-scraper`](https://apify.com/nick.cheng/youtube-transcript-scraper) | $0.005/transcript; no captions, no charge |
 | TikTok transcripts — TikTok's captions as text + timed segments | [`nick.cheng/tiktok-transcript-scraper`](https://apify.com/nick.cheng/tiktok-transcript-scraper) | $0.003/transcript; no captions, no charge |
 | LinkedIn companies (industry, size, HQ, website, followers, employees, latest job openings) and public profiles (name, headline, titles, companies, location, education) — no login | [`nick.cheng/linkedin-company-profile-scraper`](https://apify.com/nick.cheng/linkedin-company-profile-scraper) | $0.004/company · $0.004/profile |

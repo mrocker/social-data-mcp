@@ -6,7 +6,7 @@ description: Fetch TikTok account profiles (follower count, likes, video count, 
 # TikTok profiles & video stats
 
 Pay-per-result Apify Actor `nick.cheng/tiktok-profile-stats-scraper`. No login, no cookies, no
-signature reverse-engineering. Charges only for rows that came back ($0.02/profile, $0.01/video —
+signature reverse-engineering. Charges only for rows that came back ($0.02/profile, $0.003/video —
 same on every plan). Needs `APIFY_TOKEN` (free account: https://console.apify.com/account/integrations).
 
 ## When to use
