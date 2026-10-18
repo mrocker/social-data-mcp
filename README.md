@@ -1,7 +1,7 @@
 # social-data-mcp
 
-Pay-per-result social data tools — **X/Twitter profiles & tweets**, **YouTube videos & channels**,
-**TikTok profiles & video stats**, and **YouTube / TikTok transcripts** — exposed to AI agents as MCP
+Pay-per-result data tools — **X/Twitter profiles & tweets**, **YouTube videos & channels**,
+**TikTok profiles & video stats**, **YouTube / TikTok transcripts**, and **LinkedIn companies & public profiles** — exposed to AI agents as MCP
 servers and as Agent Skills. They run on [Apify](https://apify.com/nick.cheng). No platform API key is
 needed and nothing logs in on its own; the one exception is full X timelines, which need cookies from a
 session of your own (X shows logged-out visitors only an account's latest few posts). You are charged
@@ -14,6 +14,7 @@ only for results that actually came back, at the same price on every Apify plan 
 | TikTok profiles & per-video stats | [`nick.cheng/tiktok-profile-stats-scraper`](https://apify.com/nick.cheng/tiktok-profile-stats-scraper) | $0.02/profile · $0.01/video |
 | YouTube transcripts — spoken-language captions as text + timed segments, from links or channels | [`nick.cheng/youtube-transcript-scraper`](https://apify.com/nick.cheng/youtube-transcript-scraper) | $0.005/transcript; no captions, no charge |
 | TikTok transcripts — TikTok's captions as text + timed segments | [`nick.cheng/tiktok-transcript-scraper`](https://apify.com/nick.cheng/tiktok-transcript-scraper) | $0.003/transcript; no captions, no charge |
+| LinkedIn companies (industry, size, HQ, website, followers, employees, latest job openings) and public profiles (name, headline, titles, companies, location, education) — no login | [`nick.cheng/linkedin-company-profile-scraper`](https://apify.com/nick.cheng/linkedin-company-profile-scraper) | $0.004/company · $0.004/profile |
 
 The YouTube and TikTok tools can also return the transcript alongside the stats (`includeSubtitles: true`,
 no extra charge).
@@ -31,7 +32,7 @@ Apify hosts an MCP endpoint for every Actor. Add one URL to any client that supp
 servers (Claude, Cursor, VS Code, …) and authenticate with your Apify account when prompted:
 
 ```
-https://mcp.apify.com/?tools=nick.cheng/x-twitter-profile-tweets-scraper,nick.cheng/youtube-video-channel-scraper,nick.cheng/tiktok-profile-stats-scraper,nick.cheng/youtube-transcript-scraper,nick.cheng/tiktok-transcript-scraper
+https://mcp.apify.com/?tools=nick.cheng/x-twitter-profile-tweets-scraper,nick.cheng/youtube-video-channel-scraper,nick.cheng/tiktok-profile-stats-scraper,nick.cheng/youtube-transcript-scraper,nick.cheng/tiktok-transcript-scraper,nick.cheng/linkedin-company-profile-scraper
 ```
 
 Or pick one: `https://mcp.apify.com/?tools=nick.cheng/youtube-transcript-scraper`.
@@ -39,7 +40,7 @@ Or pick one: `https://mcp.apify.com/?tools=nick.cheng/youtube-transcript-scraper
 The servers are also listed in the official MCP Registry as
 `io.github.mrocker/x-twitter-profile-tweets`, `io.github.mrocker/youtube-video-channel`,
 `io.github.mrocker/tiktok-profile-stats`, `io.github.mrocker/youtube-transcripts`,
-`io.github.mrocker/tiktok-transcripts` (see `servers/`), and the first three on Smithery:
+`io.github.mrocker/tiktok-transcripts`, `io.github.mrocker/linkedin-company-profile` (see `servers/`), and the first three on Smithery:
 [nick-cheng/x-twitter-profile-tweets](https://smithery.ai/servers/nick-cheng/x-twitter-profile-tweets) ·
 [nick-cheng/youtube-video-channel](https://smithery.ai/servers/nick-cheng/youtube-video-channel) ·
 [nick-cheng/tiktok-profile-stats](https://smithery.ai/servers/nick-cheng/tiktok-profile-stats)
@@ -62,7 +63,7 @@ MCP Registry as `io.github.mrocker/social-data-mcp`:
 }
 ```
 
-This is a thin wrapper that starts Apify's own `@apify/actors-mcp-server` pre-scoped to the five
+This is a thin wrapper that starts Apify's own `@apify/actors-mcp-server` pre-scoped to the six
 Actors above. Get a token at https://console.apify.com/account/integrations (free account is enough).
 
 ## Use as Agent Skills
@@ -71,13 +72,14 @@ Actors above. Get a token at https://console.apify.com/account/integrations (fre
 npx skills add mrocker/social-data-mcp
 ```
 
-Installs five skills — `x-twitter-profile-tweets`, `youtube-video-channel`, `tiktok-profile-stats`,
-`youtube-transcripts`, `tiktok-transcripts` — each a short `SKILL.md` telling the agent when to call the tool, how (one `curl`), what comes
+Installs six skills — `x-twitter-profile-tweets`, `youtube-video-channel`, `tiktok-profile-stats`,
+`youtube-transcripts`, `tiktok-transcripts`, `linkedin-company-profile` — each a short `SKILL.md` telling the agent when to call the tool, how (one `curl`), what comes
 back, and what the tool cannot do.
 
 ## What these tools will not do
 
-Keyword search on X, follower lists, reply threads, TikTok video lists per account, and speech
+Keyword search on X, follower lists, reply threads, TikTok video lists per account, LinkedIn people/company
+search, employee lists and Sales Navigator (all login-only), and speech
 recognition of their own (transcripts are the platforms' own captions; a video without captions gets
 none). Full X timelines need cookies you supply; nothing here signs in on its own or uses anyone
 else's account. The READMEs on Apify say so up front.

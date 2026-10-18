@@ -1,19 +1,19 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.mrocker/social-data-mcp",
-  "description": "X, YouTube and TikTok data plus YouTube/TikTok transcripts in one stdio MCP server. Pay per result.",
+  "description": "X, YouTube, TikTok and LinkedIn data plus video transcripts in one stdio MCP server. Pay per result.",
   "repository": {
     "url": "https://github.com/mrocker/social-data-mcp",
     "source": "github"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "websiteUrl": "https://github.com/mrocker/social-data-mcp",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "social-data-mcp",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "transport": {
         "type": "stdio"
       },

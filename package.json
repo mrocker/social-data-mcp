@@ -1,7 +1,7 @@
 {
   "name": "social-data-mcp",
-  "version": "1.1.0",
-  "description": "MCP server exposing pay-per-result social data tools hosted on Apify: X/Twitter profiles & tweets, YouTube videos & channels, TikTok profiles & videos, and YouTube/TikTok transcripts. Thin stdio wrapper around @apify/actors-mcp-server.",
+  "version": "1.2.0",
+  "description": "MCP server exposing pay-per-result social and B2B data tools hosted on Apify: X/Twitter profiles & tweets, YouTube videos & channels, TikTok profiles & videos, YouTube/TikTok transcripts, and LinkedIn companies & public profiles (no login). Thin stdio wrapper around @apify/actors-mcp-server.",
   "mcpName": "io.github.mrocker/social-data-mcp",
   "bin": {
     "social-data-mcp": "bin/social-data-mcp.js"
@@ -24,7 +24,10 @@
     "apify",
     "transcript",
     "subtitles",
-    "captions"
+    "captions",
+    "linkedin",
+    "company data",
+    "lead generation"
   ],
   "engines": {
     "node": ">=18"
