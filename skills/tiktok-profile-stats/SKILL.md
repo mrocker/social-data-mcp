@@ -14,6 +14,10 @@ same on every plan). Needs `APIFY_TOKEN` (free account: https://console.apify.co
 - "How many followers does @handle have / is it verified / how old is the account" → `handles`
 - "Stats for these video links" → `videoUrls` (full links, `vm.tiktok.com` share links, or bare IDs)
 - Creator vetting: `isBusinessAccount`, `businessCategory`, `duetSetting`, `stitchSetting`, `createdAt`
+- "How do this creator's recent videos perform" → add `recentVideos: 8` (1–12): per-video counts plus `recentStats`
+  (avg/median plays, engagement rate by plays and by followers, posts per week; pinned videos kept out of the averages)
+- "How do I contact them" → every profile row has `emails`, `phones`, `externalLinks`, `linkInBio`, `otherSocials`
+  parsed from the bio (only what the creator published)
 - "Stats and what is said in these videos" → add `includeSubtitles: true` (no extra charge). Transcripts only:
   `nick.cheng/tiktok-transcript-scraper` ($0.003 per transcript; see the `tiktok-transcripts` skill)
 
@@ -31,7 +35,8 @@ Or as an MCP tool: `https://mcp.apify.com/?tools=nick.cheng/tiktok-profile-stats
 
 - `itemType: "profile"` — `handle`, `userId`, `secUid` (stable ID), `nickname`, `bio`, `bioLink`,
   `isVerified`, `isPrivate`, `createdAt`, `followers`, `following`, `likes`, `videoCount`,
-  `isBusinessAccount`, `businessCategory`, `commentSetting`, `duetSetting`, `stitchSetting`
+  `isBusinessAccount`, `businessCategory`, `commentSetting`, `duetSetting`, `stitchSetting`,
+  `emails`, `phones`, `externalLinks`, `linkInBio`, `otherSocials`; with `recentVideos` also `recentVideos[]`, `recentStats`
 - `itemType: "video"` — `videoId`, `url`, `description`, `createdAt`, `durationSeconds`, `playCount`,
   `likeCount`, `commentCount`, `shareCount`, `collectCount`, `repostCount`, `hashtags`, `music`,
   `author` (creator's headline counts), `isAd`, `isPhotoPost`; with `includeSubtitles` also `transcript`,
@@ -40,5 +45,6 @@ Or as an MCP tool: `https://mcp.apify.com/?tools=nick.cheng/tiktok-profile-stats
 
 ## Limits
 
-No video list for an account (TikTok does not render it to logged-out clients — you supply video
-links), no comments, no search, no hashtag pages, no media download URLs.
+No full video list for an account (`recentVideos` covers the latest ~10–12 shown on the creator's
+public embed; otherwise you supply video links), no comments, no search, no hashtag pages, no media
+download URLs, no hidden contact details.

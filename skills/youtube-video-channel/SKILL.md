@@ -38,7 +38,8 @@ Or as an MCP tool: `https://mcp.apify.com/?tools=nick.cheng/youtube-video-channe
   also `transcript`, `transcriptLanguage`, `transcriptType` (`manual` / `auto-generated`), `subtitles[].segments`
   (`{start, end, text}`), `subtitlesNote`
 - `itemType: "channel"` — `channelId`, `channelName`, `handle`, `subscribersLabel`, `videoCountLabel`,
-  `description`, `keywords`
+  `description`, `keywords`, and contact details the owner published in the description: `emails`, `phones`,
+  `externalLinks`, `linkInBio`, `otherSocials` (the CAPTCHA-gated "View email address" is not touched)
 - `error: true, chargedForThis: false` — unavailable video/channel, reason given
 
 ## Limits
